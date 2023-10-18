@@ -246,17 +246,6 @@
             }
         },
         {
-            "apiVersion": "2015-05-01",
-            "name": "[variables('functionAppName')]",
-            "type": "Microsoft.Insights/components",
-            "kind": "web",
-            "location": "[resourceGroup().location]",
-            "tags": "[if(contains(parameters('tagsByResource'), 'Microsoft.Insights/components'), parameters('tagsByResource')['Microsoft.Insights/components'], json('{}'))]",
-            "properties": {
-                "Application_Type": "web"
-            }
-        },
-        {
             "apiVersion": "2019-08-01",
             "type": "Microsoft.Web/sites",
             "name": "[variables('functionAppName')]",
